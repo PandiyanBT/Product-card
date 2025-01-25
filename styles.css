@@ -108,8 +108,9 @@ body {
     justify-content: center;
 }
 .product-card { 
+    max-width: 663px;
+    max-height: 488px;
     font-family: var(--font-all);
-    max-width: 50%;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -119,24 +120,25 @@ body {
     display: flex;
     justify-items: center;
     background-color: var(--bg-clr-product-card);
-    flex-basis: 50%;
 }
 .desktop-image{
+    min-width: 100%;
+    min-height: 100%;
     border-radius: 10px 0 0 10px;
 }
 .mobile-image{
     display: none;
 }
 .product{
-    flex-basis: 50%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px;
 }
 
 .product-type{
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 5px;
     color: var(--body-text-color);
@@ -145,14 +147,15 @@ body {
 .product-name{
     font-family: var(--font-product);
     font-weight: 700;
-    font-size: 1.9rem;
+    font-size: 3rem;
     color: var(--header-text-color);
-    line-height: 25px;
+    line-height: 1;
+    
 }
 
 .product-description{
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--body-text-color);
 }
 
@@ -166,12 +169,12 @@ body {
     color: var(--button-color);
     font-family: var(--font-product);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .actual-price{
     align-self: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-decoration: line-through;
     color: var(--body-text-color);
 }
@@ -193,7 +196,8 @@ button{
 
 @media (max-width: 767px) {
     .product-card { 
-        min-width: 80%;
+        max-width: 343px;
+        max-height: 610px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -210,14 +214,20 @@ button{
     }
 
     .product{
+        max-width: 100%;
         background-color: white;
         border-radius: 0 0 10px 10px;
         justify-content: space-evenly;
         gap: 15px;
     }
-
+    .product-type{
+        font-size: 0.8rem;
+    }
+    .product-name{
+        font-size: 2.5rem;
+    }
     button{
-        min-height: 5vh;
+        min-height: 5.5vh;
     }
   
 }
